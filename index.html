@@ -1,59 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>Frontend Mentor | Loopstudios landing page</title>
+
 </head>
+
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  
+  
+	<main>
+		<nav>
+			<img src="images/logo.svg" alt="">
+			<img class="open-nav" src="images/icon-hamburger.svg" alt="">
+			<img class="close-nav" src="images/icon-close.svg" alt="">
+			<ul class="nav-items">
+				<li class="list-item"><a href="#none" class="link">About</a></li>
+				<li class="list-item"><a href="#none" class="link">Careers</a></li>
+				<li class="list-item"><a href="#none" class="link">Events</a></li>
+				<li class="list-item"><a href="#none" class="link">Products</a></li>
+				<li class="list-item"><a href="#none" class="link">Support</a></li>
+			</ul>
+		</nav>
 
-  Immersive experiences that deliver
+		<header>
+			<h2 class="text-upper">
+				Immersive experiences that deliver
+			</h2>
+		</header>
+		
+		<section class="about-leader">
+			<img class="img-100" src="images/mobile/image-interactive.jpg" alt="">
+			<div class="info">
+				<h2 class="text-upper">
+				  The leader in interactive VR
+				</h2>
+				<p class="text-lh-25">
+				  Founded in 2011, Loopstudios has been producing world-class virtual reality 
+				  projects for some of the best companies around the globe. Our award-winning 
+				  creations have transformed businesses through digital experiences that bind 
+				  to their brand.
+				</p>
+			</div>
+		</section>
+		
+		<section class="creations">
+			<h2 class="text-upper">Our creations</h2>
+			<div class="contents">
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-deep-earth.jpg" alt="">
+					</picture>
+					<p class="text-upper">Deep earth</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-night-arcade.jpg" alt="">
+					</picture>
+					<p class="text-upper">Night arcade</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-soccer-team.jpg" alt="">
+					</picture>
+					<p class="text-upper">Soccer team VR</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-grid.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-grid.jpg" alt="">
+					</picture>
+					<p class="text-upper">The grid</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-from-above.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-from-above.jpg" alt="">
+					</picture>
+					<p class="text-upper">From up above VR</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-pocket-borealis.jpg" alt="">
+					</picture>
+					<p class="text-upper">Pocket borealis</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-curiosity.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-curiosity.jpg" alt="">
+					</picture>
+					<p class="text-upper">The curiosity</p>
+				</div>
+				<div class="content">
+					<picture>
+						<source class="img-100" srcset="images/desktop/image-fisheye.jpg" media="(min-width: 850px)">
+						<img class="img-100" src="images/mobile/image-fisheye.jpg" alt="">
+					</picture>
+					<p class="text-upper">Make it fisheye</p>
+				</div>
+			</div>
+			<button type="submit" class="text-upper">
+			  SEE ALL
+			</button>
+		</section>
+		
+		<footer>
+			<h2>loopstudio</h2>
+			<ul>
+				<li>
+					<a>About</a>
+				</li>
+				<li>
+					<a>Careers</a>
+				</li>
+				<li>
+					<a>Events</a>
+				</li>
+				<li>
+					<a>Products</a>
+				</li>
+				<li>
+					<a>Support</a>
+				</li>
+			</ul>
+			<div class="media">
+				<img src="images/icon-facebook.svg" alt="">
+				<img src="images/icon-twitter.svg" alt="">
+				<img src="images/icon-pinterest.svg" alt="">
+				<img src="images/icon-instagram.svg" alt="">
+			</div>
+			<p class="copyright">
+			  © 2021 Loopstudios. All rights reserved.
+			</p>
+		</footer>
+	</main>
+	<!--
 
-  The leader in interactive VR
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
 
-  Our creations
 
-  See all
+  
+  
+  
+  
+  
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  -->
+
+	<script src="main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,292 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: transparent;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+html, body {
+	scroll-behavior: smooth;
+	color: black;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+/* end of reset */
+
+main {
+	display: grid;
+	row-gap: 200px;
+	border: 2px solud red;
+}
+
+.img-100 {
+	width: 100%;
+}
+
+.text-lh-25 {
+	line-height: 25px;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+/* nav */
+nav {
+	padding: 1em 1.2em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	transition: .3s;
+	top: 30px;
+}
+
+nav .nav-items {
+	width: 100vw;
+	top: -1000px;
+	left: 0;
+	position: absolute;
+	background-color: transparent;
+	display: grid;
+	row-gap: 50px;
+	padding: 70px 1.2em 1em; 
+}
+
+nav .close-nav {
+	display: none;
+}
+
+nav ul a {
+	font-size: 1.4rem;
+}
+/* end of nav */
+
+/* header */
+header {
+	height: 90vh;
+	font-size: 2.5rem;
+	display: grid;
+	align-items: center;
+	padding: 1em;
+	background-image: url(images/mobile/image-hero.jpg);
+}
+
+header h2 {
+	color: white;
+	border: 2px solid white;
+	padding: .5em;
+	letter-spacing: 2px;
+}
+/* end of header */
+
+/* about leader */
+.about-leader {
+	display: grid;
+	row-gap: 30px;
+	text-align: center;
+	padding: 0 1.5em;
+}
+
+.about-leader .info {
+	padding: 0 1em;
+	display: grid;
+	row-gap: 15px;
+}
+/* end of about leader */
+
+/* creations */
+.creations {
+	display: grid;
+	row-gap: 3em;
+	justify-items: center;
+	padding: 0 2em;
+}
+
+.creations .contents {
+	display: grid;
+	row-gap: 40px;
+}
+
+.creations .content {
+	position: relative;
+}
+
+.creations .content p {
+	position: absolute;
+	bottom: 15%;
+	font-size: 1.3rem;
+	width: 35%;
+	left: 5%;
+	color: white;
+}
+
+.creations  button {
+	padding: .6em 2em;
+	font-size: 1.3rem;
+	letter-spacing: 2px;
+	border: 2px solid black;
+	transition: .3s;
+}
+
+.creations  button:hover {
+	background-color: black;
+	color: white;
+}
+/* end of creations */
+
+/* footer */
+footer {
+	color: white;
+	background-color: black;
+	display: grid;
+	justify-items: center;
+	text-align: center;
+	padding: 2em 1em;
+	row-gap: 25px;
+	font-size: 1.2rem;
+}
+
+footer ul {
+	display: grid;
+	row-gap: 20px;
+}
+
+footer .media {
+	width: 30%;
+	display: flex;
+	justify-content: space-around;
+}
+/* end of footer */
+
+@media(min-width: 650px) {
+	nav .nav-items {
+		width: 55%;
+		position: static;
+		display: flex;
+		justify-content: space-around;
+		padding: 0;
+	}
+	
+	nav ul li a {
+		font-size: 1rem;
+	}
+	
+	nav .open-nav, 
+	nav .close-nav {
+		display: none;
+	}
+	
+	.about-leader,
+	.creations {
+		padding: 0 5em;
+	}
+	
+	header {
+		padding: 2em;
+		height: 450px;
+		background-image: url('images/desktop/image-hero.jpg');
+	}
+	
+	header h2 {
+		width: 45%;
+	}
+	
+	.about-leader {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		text-align: start;
+		justify-items: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	
+	.about-leader .info {
+		padding: 1em 2.5em;
+		background-color: white;
+		transform: translate(-18%, 10px);
+		align-self: end;
+	}
+	
+	.about-leader .info p {
+		line-height: 18px;
+		font-size: .68rem;
+	}
+	
+	.creations {
+		grid-template-areas: 
+			"title button"
+			"contents contents";
+		align-items: center;
+		row-gap: 50px;
+	}
+	
+	.creations h2 {
+		grid-area: title;
+		justify-self: start;
+	}
+	
+	.creations button {
+		grid-area: button;
+		justify-self: end;
+	}
+	
+	.creations .contents {
+		display: grid;
+		gap: 20px;
+		grid-area: contents;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	
+	.creations .contents .content p {
+		width: 65%;
+	}
+	
+	
+	footer {
+		grid-template-areas: 
+			"h2 media"
+			"ul p";
+		align-items: center;
+		
+	}
+	
+	footer h2 {
+		grid-area: h2;
+		justify-self: start;
+	}	
+	
+	footer .media {
+		justify-self: end;
+		grid-area: media;
+	}
+	
+	footer ul {
+		width: 75%;
+		justify-self: start;
+		display: flex;
+		grid-area: ul;
+		justify-content: space-evenly;
+	}
+	
+	footer p {
+		justify-self: end;
+		grid-area: p;
+	}
+}
